@@ -1,4 +1,5 @@
-import HomeHeader from "@/components/header/home-header";
+import HomeHeader from "@/components/layout/home-header";
+import HomeFooter from "@/components/layout/home-footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function MainLayout({
     <>
       <HomeHeader />
       {children}
-      <footer></footer>
+      <HomeFooter/>
     </>
   );
 }
