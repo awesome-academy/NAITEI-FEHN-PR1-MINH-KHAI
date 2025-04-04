@@ -1,17 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
 export default function HomeHeader() {
   const currentPath = usePathname();
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [currentMenu, setCurrentMenu] = useState<any | null>(null);
+
+  // --- Dữ liệu mẫu cho Submenu (bạn cần thay đổi href và label thực tế) ---
+  const sampleSubmenuLinks = [
+    { href: "/ruou-chivas", label: "Rượu Chivas" },
+    { href: "/hang-doc", label: "Hàng độc - Rượu độc đáo" },
+    { href: "/johnnie-walker", label: "Johnnie Walker" },
+    { href: "/ruou-whisky", label: "Rượu Whisky" },
+    { href: "/remy-martin", label: "Rượu Remy Martin" },
+    { href: "/glenmorangie", label: "Rượu Glenmorangie" },
+  ];
 
   const navLinks = [
     { href: "/", label: "TRANG CHỦ" },
-    { href: "/product", label: "RƯỢU VANG ĐỎ" },
+    {
+      href: "/product",
+      label: "RƯỢU VANG ĐỎ",
+      submenu: [
+        {
+          title: "RƯỢU VANG",
+          links: sampleSubmenuLinks,
+          image: "/brown_wine.jpg",
+        }, // Sử dụng lại data mẫu, thay đổi nếu cần
+        { title: "RƯỢU NGOẠI", links: sampleSubmenuLinks, image: "/wine.jpg" }, // Sử dụng lại data mẫu, thay đổi nếu cần
+      ],
+    },
     { href: "/product", label: "RƯỢU TRẮNG" },
     { href: "/product", label: "CHAMPAGNE" },
     { href: "/about", label: "THÔNG TIN" },
@@ -26,8 +49,21 @@ export default function HomeHeader() {
     { href: "/auth/sign-in", label: "Đăng nhập" },
     { href: "/auth/sign-up", label: "Đăng ký" },
   ];
+
+  // Hàm xử lý khi di chuột vào mục menu
+  const handleMouseEnter = (href: string) => {
+    const link = navLinks.find((l) => l.href === href);
+    if (link?.submenu) {
+      setOpenSubmenu(href);
+      setCurrentMenu(link.submenu[0]); // Mặc định hiển thị submenu đầu tiên
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setOpenSubmenu(null);
+  };
   return (
-    <header className="w-full">
+    <header className="w-full  " onMouseLeave={handleMouseLeave}>
       <div className="bg-white py-1 text-xs text-gray-600 border-b border-gray-200">
         <div className="container max-w-[1200px] mx-auto flex justify-between items-center px-4">
           <div className="flex items-center space-x-2">
@@ -57,7 +93,7 @@ export default function HomeHeader() {
         </div>
       </div>
 
-      <div className="bg-black py-4">
+      <div className="bg-black py-4 relative">
         <div className="container max-w-[1200px] mx-auto flex justify-between items-center px-4">
           <Link href="/" className="flex items-center">
             <Image
@@ -71,14 +107,18 @@ export default function HomeHeader() {
           </Link>
 
           <nav className="tracking-widest">
-            <ul className="flex space-x-12 items-center text-sm font-semibold uppercase">
+            <ul className="  flex space-x-12 items-center text-sm font-semibold uppercase">
               {navLinks.map((link) => (
-                <li key={link.label}>
+                <li
+                  key={link.label}
+                  onMouseEnter={() => handleMouseEnter(link.href)}
+                >
                   <Link
                     href={link.href}
                     className={`
                       hover:text-yellow-500
                       transition-colors duration-200
+
                       ${
                         currentPath === link.href
                           ? "text-yellow-500"
@@ -88,6 +128,68 @@ export default function HomeHeader() {
                   >
                     {link.label}
                   </Link>
+                
+
+                  {link.submenu && openSubmenu === link.href && (
+                    <div
+                      className="
+                        absolute top-full mt-0
+                        left-[1/2]
+                         -translate-x-[20%]
+                        bg-white shadow-lg rounded-b-md
+                        text-black text-left normal-case font-normal
+                        p-6
+                        z-20
+                        border border-yellow-500
+                        min-w-[800px]
+
+                      "
+                      // onMouseEnter={() => handleMouseEnter(link.href)} // Giữ menu mở khi hover vào chính nó
+                    >
+                      <div className="grid grid-cols-3 gap-x-6 gap-y-4">
+                        {link.submenu.map((item, index) => (
+                          <div
+                            key={index}
+                            onMouseEnter={() => setCurrentMenu(item)} // Giữ submenu mở khi hover vào chính nó
+                            // className={
+                            //   item.type === "image"
+                            //     ? "flex items-center justify-center"
+                            //     : ""
+                            // }
+                          >
+                            <div>
+                              <h4 className="font-semibold text-base mb-3 uppercase border-b pb-1 border-gray-200">
+                                {item.title}
+                              </h4>
+                              <ul className="space-y-2">
+                                {item.links!.map((sublink) => (
+                                  <li key={sublink.href}>
+                                    <Link
+                                      href={sublink.href}
+                                      className="block text-sm text-gray-700 hover:text-yellow-600 hover:underline"
+                                    >
+                                      {sublink.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        ))}
+                        {currentMenu && (
+                          <div className="overflow-hidden rounded h-[200px] w-[300px]    ">
+                            <Image
+                              src={currentMenu.image}
+                              alt={"iamge "}
+                              width={200} // Điều chỉnh kích thước
+                              height={150}
+                              className="object-cover h-full w-full "
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>

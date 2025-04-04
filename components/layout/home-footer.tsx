@@ -60,7 +60,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Về chúng tôi
                   </a>
@@ -68,7 +68,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Giao hàng
                   </a>
@@ -76,7 +76,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Cài đặt
                   </a>
@@ -85,7 +85,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Lưu trữ
                   </a>
@@ -93,7 +93,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Chính sách riêng tư
                   </a>
@@ -108,7 +108,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Vận chuyển và tra hàng
                   </a>
@@ -116,7 +116,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Mua hàng an toàn
                   </a>
@@ -124,7 +124,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Vận quốc tế
                   </a>
@@ -132,7 +132,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Liên kết
                   </a>
@@ -140,7 +140,7 @@ export default function HomeFooter() {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-black transition-colors text-gray-500"
+                    className="hover:text-yellow-500 transition-colors text-gray-500"
                   >
                     Dịch vụ giảm giá
                   </a>
@@ -165,7 +165,7 @@ export default function HomeFooter() {
             />
             <Button
               type="submit"
-              className="rounded-l-none bg-gray-800 hover:bg-black text-white px-4 h-9"
+              className="rounded-l-none bg-gray-800 hover:bg-blyellow-500ext-white px-4 h-9"
             >
               GỬI
             </Button>
@@ -174,28 +174,28 @@ export default function HomeFooter() {
             <a
               href="#"
               aria-label="Twitter"
-              className="hover:text-black transition-colors"
+              className="hover:text-yellow-500 transition-colors"
             >
               <FaTwitter size={18} />
             </a>
             <a
               href="#"
               aria-label="Facebook"
-              className="hover:text-black transition-colors"
+              className="hover:text-yellow-500 transition-colors"
             >
               <TiSocialGooglePlus size={18} />
             </a>
             <a
               href="#"
               aria-label="Pinterest"
-              className="hover:text-black transition-colors"
+              className="hover:text-yellow-500 transition-colors"
             >
               <FaLinkedinIn size={18} />
             </a>
             <a
               href="#"
               aria-label="RSS Feed"
-              className="hover:text-black transition-colors"
+              className="hover:text-yellow-500 transition-colors"
             >
               <FaRss size={18} />
             </a>
@@ -226,7 +226,7 @@ export default function HomeFooter() {
               <Mail size={18} className="mr-2 flex-shrink-0 text-gray-600" />
               <a
                 href="mailto:support@example.com"
-                className="hover:text-black transition-colors text-gray-500"
+                className="hover:text-yellow-500 transition-colors text-gray-500"
               >
                 support@bizweb.vn
               </a>
@@ -241,9 +241,9 @@ export default function HomeFooter() {
         </p>
         <div className="flex space-x-6  items-center">
           {/* Thay thế PlaceholderPaymentIcon bằng component Image hoặc img */}
-          <FaCcMastercard size={30} className="hover:text-red-400" />
-          <FaCcVisa size={30} className="hover:text-red-400" />
-          <FaCcPaypal size={30} className="hover:text-red-400" />
+          <FaCcMastercard size={30} className="hover:text-yellow-50000" />
+          <FaCcVisa size={30} className="hover:text-yellow-50000" />
+          <FaCcPaypal size={30} className="hover:text-yellow-50000" />
         </div>
       </div>
     </footer>
