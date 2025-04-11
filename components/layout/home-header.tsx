@@ -5,8 +5,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function HomeHeader() {
+  const { currentUser, logout } = useAuth();
   const currentPath = usePathname();
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const [currentMenu, setCurrentMenu] = useState<any | null>(null);
@@ -44,14 +46,19 @@ export default function HomeHeader() {
     { href: "/blog", label: "BLOG" },
     { href: "/contact", label: "LIÊN HỆ" },
   ];
-  const topBarLinks = [
-    { href: "/profile", label: "Tài khoản của tôi" },
-    { href: "/order", label: "Tra cứu đơn hàng" },
-    { href: "/fav", label: "Danh sách yêu thích" },
-    { href: "/cart", label: "Giỏ hàng" },
-    { href: "/auth/sign-in", label: "Đăng nhập" },
-    { href: "/auth/sign-up", label: "Đăng ký" },
-  ];
+
+  const topBarLinks = currentUser
+    ? [
+        { href: "/profile", label: "Tài khoản của tôi" },
+        { href: "/order", label: "Tra cứu đơn hàng" },
+        { href: "/fav", label: "Danh sách yêu thích" },
+        { href: "/cart", label: "Giỏ hàng" },
+        { href: "#", label: "Đăng xuất", onClick: logout },
+      ]
+    : [
+        { href: "/auth/sign-in", label: "Đăng nhập" },
+        { href: "/auth/sign-up", label: "Đăng ký" },
+      ];
 
   const handleMouseEnter = (href: string) => {
     const link = navLinks.find((l) => l.href === href);
@@ -64,19 +71,29 @@ export default function HomeHeader() {
   const handleMouseLeave = () => {
     setOpenSubmenu(null);
   };
+
   return (
     <header className="w-full" onMouseLeave={handleMouseLeave}>
       <div className="bg-white py-1 text-xs text-gray-600 border-b border-gray-200">
         <div className="container max-w-[1200px] mx-auto flex justify-between items-center px-4">
           <div className="flex items-center space-x-2">
             {topBarLinks.map((link, index) => (
-              <React.Fragment key={link.href}>
-                <Link
-                  href={link.href}
-                  className="hover:text-black hover:underline"
-                >
-                  {link.label}
-                </Link>
+              <React.Fragment key={link.label}>
+                {link.label === "Đăng xuất" && link.onClick ? (
+                  <button
+                    onClick={link.onClick}
+                    className="hover:text-black hover:underline text-xs cursor-pointer"
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className="hover:text-black hover:underline text-xs"
+                  >
+                    {link.label}
+                  </Link>
+                )}
                 {index < topBarLinks.length - 1 && <span>-</span>}
               </React.Fragment>
             ))}
@@ -109,7 +126,7 @@ export default function HomeHeader() {
           </Link>
 
           <nav className="tracking-widest">
-            <ul className="  flex space-x-12 items-center text-sm font-semibold uppercase">
+            <ul className="flex space-x-12 items-center text-sm font-semibold uppercase">
               {navLinks.map((link) => (
                 <li
                   key={link.label}
@@ -120,7 +137,6 @@ export default function HomeHeader() {
                     className={`
                       hover:text-yellow-500
                       transition-colors duration-200
-
                       ${
                         currentPath === link.href
                           ? "text-yellow-500"
@@ -135,22 +151,18 @@ export default function HomeHeader() {
                     <div
                       className="
                         absolute top-full mt-0
-                        left-[1/2]
-                         -translate-x-[20%]
+                        left-[1/2] -translate-x-[20%]
                         bg-white shadow-lg rounded-b-md
                         text-black text-left normal-case font-normal
-                        p-6
-                        z-20
-                        border border-yellow-500
+                        p-6 z-20 border border-yellow-500
                         min-w-[800px]
-
                       "
                     >
                       <div className="grid grid-cols-3 gap-x-6 gap-y-4">
                         {link.submenu.map((item, index) => (
                           <div
                             key={index}
-                            onMouseEnter={() => setCurrentMenu(item)} // Giữ submenu mở khi hover vào chính nó
+                            onMouseEnter={() => setCurrentMenu(item)}
                           >
                             <div>
                               <h4 className="font-semibold text-base mb-3 uppercase border-b pb-1 border-gray-200">
@@ -172,13 +184,13 @@ export default function HomeHeader() {
                           </div>
                         ))}
                         {currentMenu && (
-                          <div className="overflow-hidden rounded h-[200px] w-[300px]    ">
+                          <div className="overflow-hidden rounded h-[200px] w-[300px]">
                             <Image
                               src={currentMenu.image}
                               alt={"placeholder"}
                               width={200}
                               height={150}
-                              className="object-cover h-full w-full "
+                              className="object-cover h-full w-full"
                             />
                           </div>
                         )}
