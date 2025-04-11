@@ -73,17 +73,16 @@ export const columns: ColumnDef<Order>[] = [
       let statusClasses =
         "inline-block px-2.5 py-0.5 rounded-full text-xs font-medium"; // Base badge styles
       const lowerCaseStatus = originalStatus?.toLowerCase();
-
       switch (lowerCaseStatus) {
-        case "delivered": // Green for success
+        case "delivered":
           statusClasses +=
             " bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300";
           break;
-        case "cancelled": // Red for cancellation/failure
+        case "cancelled":
           statusClasses +=
             " bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300";
           break;
-        case "shipped": // Blue for in-progress/informational
+        case "shipped":
           statusClasses +=
             " bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
           break;

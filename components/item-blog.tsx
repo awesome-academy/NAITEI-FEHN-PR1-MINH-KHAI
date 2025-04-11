@@ -8,7 +8,7 @@ export interface ItemBlogProps {
   date: string;
   commentCount: number;
   description: string;
-  href: string; // Optional href prop for the link
+  href?: string; // Optional href prop for the link
 }
 
 export default function ItemBlog({
