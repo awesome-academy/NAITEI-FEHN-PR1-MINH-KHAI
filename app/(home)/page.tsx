@@ -42,6 +42,7 @@ export default async function Home() {
       commentCount: 60,
       description:
         "Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả...",
+      href: "/blog/vang-thang-long-classic-1",
     },
     {
       imageUrl: "/images/blog1.jpg",
@@ -51,6 +52,7 @@ export default async function Home() {
       commentCount: 60,
       description:
         "Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả...",
+      href: "/blog/vang-thang-long-classic-2",
     },
   ];
 

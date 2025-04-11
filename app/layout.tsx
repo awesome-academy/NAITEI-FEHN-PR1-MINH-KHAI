@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Merriweather, Merriweather_Sans } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/app/context/AuthContext";
 
 const merriweatherSans = Merriweather_Sans({
   // variable: "--font-merriweather-sans",
@@ -29,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${merriweatherMono.className} ${merriweatherSans.className} antialiased`}
       >
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
