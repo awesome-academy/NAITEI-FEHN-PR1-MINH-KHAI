@@ -1232,7 +1232,7 @@
       ],
       "images": [
         {
-          "url": "/images/21.jpg",
+          "url": "/images/1.jpg",
           "alt": "Alcohol 21 Image"
         }
       ],
@@ -1456,8 +1456,8 @@
       ],
       "images": [
         {
-          "url": "/images/29.jpg",
-          "alt": "Alcohol 29 Image"
+          "url": "/images/2.jpg",
+          "alt": "Alcohol 2 Image"
         }
       ],
       "created_at": "2024-06-25T12:29:42.594732",
@@ -1500,16 +1500,16 @@
       "quantity": 5,
       "checked": true,
       "created_at": "2024-12-01T05:33:48.595000",
-      "updated_at": "2025-03-08T22:11:22.595009"
+      "updated_at": "2025-04-11T09:59:03.378Z"
     },
     {
       "id": "b9bf4ecd-69d0-4863-be8f-6b976337c93d",
       "userId": "d587573e-73b2-4fe9-89d8-3cfbcf63f672",
       "productId": "6dd7255b-c6a6-4d6b-9de2-5cb3a56dbc2d",
       "quantity": 2,
-      "checked": false,
+      "checked": true,
       "created_at": "2024-07-26T21:01:35.595053",
-      "updated_at": "2024-08-14T20:01:33.595061"
+      "updated_at": "2025-04-11T09:59:03.380Z"
     },
     {
       "id": "0fc504d4-8550-4b3e-8b6c-961cc41546b8",
