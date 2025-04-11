@@ -38,8 +38,7 @@ export type Product = {
   createdAt: string;
   updatedAt: string;
   stock : number;
-
-  discount?: number; // Optional discount field
+  discount?: number;
 };
 
 export type Address = {
@@ -59,7 +58,7 @@ export type Address = {
 
 
 export type BlogPost =  {
-    id: string; // Unique ID or slug
+    id: string;
     imageUrl: string;
     title: string;
     author: string;
@@ -67,4 +66,14 @@ export type BlogPost =  {
     commentCount: number;
     description: string;
     href: string;
+  }
+
+  export type Cart = {
+    id: string;
+    productId: string;
+    checked: boolean;
+    quantity: number;
+    createdAt: string;
+    updatedAt: string;
+    product: Product;
   }

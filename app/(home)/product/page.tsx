@@ -8,7 +8,9 @@ import { ProductList } from "@/components/product/product-list";
 
 export async function getProductList(): Promise<ProductItem[]> {
   try {
-    const res = await axios.get(`${process.env.SERVER_API_URL}/products`);
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_SERVER_API_URL}/products`
+    );
     const productsData: ProductItem[] = res.data.map((product: Product) => ({
       id: product.id as string,
       imageUrl: product.images[0]?.url || "",

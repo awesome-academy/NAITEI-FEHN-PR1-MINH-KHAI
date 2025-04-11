@@ -20,7 +20,7 @@ const sampleCustomerInfo = {
 async function getOrders(): Promise<Order[]> {
   try {
     const res = await axios.get(
-      `${process.env.SERVER_API_URL}/orders?_embed=order_items`
+      `${process.env.NEXT_PUBLIC_SERVER_API_URL}/orders?_embed=order_items&_sort=created_at&_order=desc`
     );
     const ordersData = res.data.map(
       (order: any, index: number) =>

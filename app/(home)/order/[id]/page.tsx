@@ -4,7 +4,6 @@ import Image from "next/image";
 import React from "react";
 import axios from "axios";
 import { notFound } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -18,15 +17,15 @@ import {
   statusStyle,
   translateOrderStatusTS,
 } from "@/lib/utils";
-import { Farro } from "next/font/google";
-import { FaArrowRight } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
+import { CancelOrderButtonClient } from "@/components/order/cancel-order-button";
 
 async function getOrderDetails({ id }: { id: string }): Promise<{
   data: (Order & { address: Address; orderItems: OrderItem[] }) | null;
 }> {
   try {
     const res = await axios.get(
-      `${process.env.SERVER_API_URL}/orders/${id}?_expand=address&_embed=order_items`
+      `${process.env.NEXT_PUBLIC_SERVER_API_URL}/orders/${id}?_expand=address&_embed=order_items`
     );
 
     if (!res.data || !res.data.id) {
@@ -42,7 +41,7 @@ async function getOrderDetails({ id }: { id: string }): Promise<{
         let fetchedProductData: Product | null = null;
         try {
           const productRes = await axios.get(
-            `${process.env.SERVER_API_URL}/products/${item.productId}`
+            `${process.env.NEXT_PUBLIC_SERVER_API_URL}/products/${item.productId}`
           );
 
           if (productRes.data) {
@@ -165,28 +164,25 @@ export default async function OrderDetailPage({
       <div className="space-y-6  bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
         <div className=" space-y-1 grid grid-cols-1 md:grid-cols-2 border-b pb-4 mb-4">
           <div>
-            <span className="font-medium text-gray-600">Mã đơn hàng:</span>{" "}
-            {orderData.code}
+            <span className="font-medium ">Mã đơn hàng:</span> {orderData.code}
           </div>
           <div>
-            <span className="font-medium text-gray-600">Ngày đặt:</span>{" "}
+            <span className="font-medium ">Ngày đặt:</span>{" "}
             {new Date(orderData.date).toLocaleDateString("vi-VN")}
           </div>
           <div>
-            <span className="font-medium text-gray-600">Trạng thái:</span>
+            <span className="font-medium ">Trạng thái:</span>
             <span className={statusStyle(orderData.status)}>
               {" "}
               {translateOrderStatusTS(orderData.status)}
             </span>
           </div>
           <div>
-            <span className="font-medium text-gray-600">
-              Phương thức thanh toán:
-            </span>{" "}
+            <span className="font-medium ">Phương thức thanh toán:</span>{" "}
             {orderData.paymentMethod}
           </div>
           <div>
-            <span className="font-medium text-gray-600">Tổng tiền:</span>{" "}
+            <span className="font-medium ">Tổng tiền:</span>{" "}
             <span className="font-bold text-lg text-red-600">
               {orderData.total}
             </span>
@@ -194,32 +190,28 @@ export default async function OrderDetailPage({
         </div>
 
         <div className="border-b pb-4 mb-4 text-sm">
-          <h2 className="text-xl font-semibold mb-3 text-gray-800">
+          <h2 className="text-xl font-semibold mb-3 ">
             <span>Địa chỉ giao hàng</span>
           </h2>
-          <div className="space-y-1 text-gray-700">
+          <div className="space-y-1 ">
             <p>
-              <span className="inline-block w-24 font-medium text-gray-600">
-                Họ tên:
-              </span>
+              <span className="inline-block w-24 font-medium ">Họ tên:</span>
               {orderData.address.first_name} {orderData.address.last_name}
             </p>
             <p>
-              <span className="inline-block w-24 font-medium text-gray-600">
+              <span className="inline-block w-24 font-medium ">
                 Điện thoại:
               </span>
               {orderData.address.phone}
             </p>
             {orderData.address.company && (
               <p>
-                <span className="inline-block w-24 font-medium text-gray-600">
-                  Công ty:
-                </span>
+                <span className="inline-block w-24 font-medium ">Công ty:</span>
                 {orderData.address.company}
               </p>
             )}
             <p>
-              <span className="inline-block w-24 font-medium text-gray-600 align-top">
+              <span className="inline-block w-24 font-medium  align-top">
                 Địa chỉ:
               </span>
               <span className="inline-block max-w-[calc(100%-6rem)]">
@@ -229,9 +221,7 @@ export default async function OrderDetailPage({
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-semibold mb-3 text-gray-800">
-            Sản phẩm đã đặt
-          </h2>
+          <h2 className="text-xl font-semibold mb-3 ">Sản phẩm đã đặt</h2>
           <div className="border rounded-md overflow-hidden">
             <Table>
               <TableHeader>
@@ -293,13 +283,15 @@ export default async function OrderDetailPage({
 
         <div className="mt-6 flex flex-col sm:flex-row items-end justify-between gap-4">
           <div className="text-right w-full sm:w-auto">
-            <span className="text-lg font-semibold text-gray-800">
-              Tổng cộng:{" "}
-            </span>
+            <span className="text-lg font-semibold ">Tổng cộng: </span>
             <span className="text-xl font-bold text-red-600">
               {orderData.total}
             </span>
           </div>
+          <CancelOrderButtonClient
+            currentStatus={orderData.status}
+            orderId={id}
+          />
         </div>
       </div>
     </main>
