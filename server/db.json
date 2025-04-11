@@ -1,4 +1,4 @@
-﻿{
+{
   "users": [
     {
       "id": "d587573e-73b2-4fe9-89d8-3cfbcf63f672",
@@ -249,6 +249,28 @@
       "full_name": "User 25 Name",
       "created_at": "2025-02-10T09:35:31.592928",
       "updated_at": "2024-10-25T09:48:31.592932"
+    },
+    {
+      "full_name": "tran khai",
+      "username": "trankhaine",
+      "email": "tranduckhai@gmail.com",
+      "password": "1234567",
+      "subscribeToNewsletter": true,
+      "role": "user",
+      "created_at": "2025-04-10T09:49:43.847Z",
+      "updated_at": "2025-04-10T09:49:43.847Z",
+      "id": "C9E1nFR"
+    },
+    {
+      "full_name": "tran khai",
+      "username": "21020340",
+      "email": "tran.duc.khai1@sun-asterisk.com",
+      "password": "1234567",
+      "subscribeToNewsletter": false,
+      "role": "user",
+      "created_at": "2025-04-10T10:09:14.954Z",
+      "updated_at": "2025-04-10T10:09:14.954Z",
+      "id": "yOl8jmK"
     }
   ],
   "addresses": [
@@ -643,7 +665,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Chivas",
       "stock": 35,
-      "tags": ["tag1", "alcohol", "cheap"],
+      "tags": [
+        "tag1",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/1.jpg",
@@ -667,7 +693,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Hàng độc - Rượu độc đáo",
       "stock": 42,
-      "tags": ["tag2", "alcohol", "premium"],
+      "tags": [
+        "tag2",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/2.jpg",
@@ -691,7 +721,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Johnnie Walker",
       "stock": 75,
-      "tags": ["tag3", "alcohol", "cheap"],
+      "tags": [
+        "tag3",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/3.jpg",
@@ -715,7 +749,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Whisky",
       "stock": 77,
-      "tags": ["tag4", "alcohol", "premium"],
+      "tags": [
+        "tag4",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/4.jpg",
@@ -739,7 +777,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Remy Martin",
       "stock": 27,
-      "tags": ["tag5", "alcohol", "cheap"],
+      "tags": [
+        "tag5",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/5.jpg",
@@ -763,7 +805,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Pháp",
       "stock": 42,
-      "tags": ["tag6", "alcohol", "cheap"],
+      "tags": [
+        "tag6",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/6.jpg",
@@ -787,7 +833,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Remy Martin",
       "stock": 74,
-      "tags": ["tag7", "alcohol", "cheap"],
+      "tags": [
+        "tag7",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/7.jpg",
@@ -811,7 +861,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Glenmorangie",
       "stock": 40,
-      "tags": ["tag8", "alcohol", "premium"],
+      "tags": [
+        "tag8",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/8.jpg",
@@ -835,7 +889,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Ballantine's",
       "stock": 90,
-      "tags": ["tag9", "alcohol", "cheap"],
+      "tags": [
+        "tag9",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/9.jpg",
@@ -859,7 +917,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Úc",
       "stock": 90,
-      "tags": ["tag10", "alcohol", "premium"],
+      "tags": [
+        "tag10",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/10.jpg",
@@ -883,7 +945,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Úc",
       "stock": 45,
-      "tags": ["tag11", "alcohol", "premium"],
+      "tags": [
+        "tag11",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/11.jpg",
@@ -907,7 +973,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Mỹ",
       "stock": 93,
-      "tags": ["tag12", "alcohol", "premium"],
+      "tags": [
+        "tag12",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/12.jpg",
@@ -931,7 +1001,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Chi-Lê",
       "stock": 25,
-      "tags": ["tag13", "alcohol", "cheap"],
+      "tags": [
+        "tag13",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/13.jpg",
@@ -955,7 +1029,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Philip",
       "stock": 9,
-      "tags": ["tag14", "alcohol", "premium"],
+      "tags": [
+        "tag14",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/14.jpg",
@@ -979,7 +1057,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Johnnie Walker",
       "stock": 85,
-      "tags": ["tag15", "alcohol", "premium"],
+      "tags": [
+        "tag15",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/15.jpg",
@@ -1003,7 +1085,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Chi-Lê",
       "stock": 68,
-      "tags": ["tag16", "alcohol", "premium"],
+      "tags": [
+        "tag16",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/16.jpg",
@@ -1027,7 +1113,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Glenmorangie",
       "stock": 32,
-      "tags": ["tag17", "alcohol", "cheap"],
+      "tags": [
+        "tag17",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/17.jpg",
@@ -1051,7 +1141,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Glenmorangie",
       "stock": 11,
-      "tags": ["tag18", "alcohol", "cheap"],
+      "tags": [
+        "tag18",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/18.jpg",
@@ -1075,7 +1169,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Glenmorangie",
       "stock": 32,
-      "tags": ["tag19", "alcohol", "cheap"],
+      "tags": [
+        "tag19",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/19.jpg",
@@ -1099,7 +1197,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Cognac",
       "stock": 9,
-      "tags": ["tag20", "alcohol", "cheap"],
+      "tags": [
+        "tag20",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/20.jpg",
@@ -1123,7 +1225,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Cognac",
       "stock": 22,
-      "tags": ["tag21", "alcohol", "cheap"],
+      "tags": [
+        "tag21",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/21.jpg",
@@ -1147,7 +1253,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Úc",
       "stock": 8,
-      "tags": ["tag22", "alcohol", "cheap"],
+      "tags": [
+        "tag22",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/22.jpg",
@@ -1171,7 +1281,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Úc",
       "stock": 14,
-      "tags": ["tag23", "alcohol", "cheap"],
+      "tags": [
+        "tag23",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/23.jpg",
@@ -1195,7 +1309,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Ý",
       "stock": 75,
-      "tags": ["tag24", "alcohol", "premium"],
+      "tags": [
+        "tag24",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/24.jpg",
@@ -1219,7 +1337,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Ý",
       "stock": 11,
-      "tags": ["tag25", "alcohol", "premium"],
+      "tags": [
+        "tag25",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/25.jpg",
@@ -1243,7 +1365,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Hàng độc - Rượu độc đáo",
       "stock": 34,
-      "tags": ["tag26", "alcohol", "premium"],
+      "tags": [
+        "tag26",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/26.jpg",
@@ -1267,7 +1393,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Nam Phi",
       "stock": 23,
-      "tags": ["tag27", "alcohol", "cheap"],
+      "tags": [
+        "tag27",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/27.jpg",
@@ -1291,7 +1421,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Ý",
       "stock": 21,
-      "tags": ["tag28", "alcohol", "cheap"],
+      "tags": [
+        "tag28",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/28.jpg",
@@ -1315,7 +1449,11 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Chivas",
       "stock": 15,
-      "tags": ["tag29", "alcohol", "premium"],
+      "tags": [
+        "tag29",
+        "alcohol",
+        "premium"
+      ],
       "images": [
         {
           "url": "/images/29.jpg",
@@ -1339,7 +1477,11 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Chi-Lê",
       "stock": 54,
-      "tags": ["tag30", "alcohol", "cheap"],
+      "tags": [
+        "tag30",
+        "alcohol",
+        "cheap"
+      ],
       "images": [
         {
           "url": "/images/30.jpg",
