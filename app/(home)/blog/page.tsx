@@ -28,7 +28,7 @@ async function getBlogsPaginated({
   try {
     const res = await axios.get(
       `${
-        process.env.SERVER_API_URL
+        process.env.NEXT_PUBLIC_SERVER_API_URL
       }/blogs?_expand=user&_embed=comments&_start=${
         (page - 1) * limit
       }&_limit=${limit}`

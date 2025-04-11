@@ -14,13 +14,13 @@ const sampleCustomerInfo = {
   company: "Tòa nhà Hà Nội group",
   address: "442 Đội Cấn, Ba Đình Hà Nội",
   phone: "(04) 3786 8904",
-  addressDetailUrl: "/account/address",
+  addressDetailUrl: "/addresses",
 };
 
 async function getOrders(): Promise<Order[]> {
   try {
     const res = await axios.get(
-      `${process.env.SERVER_API_URL}/orders?_embed=order_items`
+      `${process.env.NEXT_PUBLIC_SERVER_API_URL}/orders?_embed=order_items&_sort=created_at&_order=desc`
     );
     const ordersData = res.data.map(
       (order: any, index: number) =>
@@ -33,7 +33,7 @@ async function getOrders(): Promise<Order[]> {
           status: order.status,
           paymentMethod: order.payment_method as string,
           stt: (index + 1).toString(),
-          detailUrl: `/orders/${order.id}`,
+          detailUrl: `/order/${order.id}`,
         } as Order)
     );
     return ordersData;

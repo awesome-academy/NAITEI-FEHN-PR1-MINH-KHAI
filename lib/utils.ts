@@ -47,3 +47,34 @@ export function formatVndThousands(priceInThousands: number | null | undefined):
     return "Lỗi định dạng";
   }
 }
+
+
+export function statusStyle(status: string | null | undefined): string {
+  let statusClasses =
+  "inline-block px-3 py-1 rounded-full font-medium";
+  const lowerCaseStatus = status?.toLowerCase();
+  switch (lowerCaseStatus) {
+        case "delivered": // Green for success
+          statusClasses +=
+            " bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300";
+          break;
+        case "cancelled": // Red for cancellation/failure
+          statusClasses +=
+            " bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300";
+          break;
+        case "shipped": // Blue for in-progress/informational
+          statusClasses +=
+            " bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
+          break;
+        case "pending":
+          statusClasses +=
+            " bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300";
+          break;
+        default:
+          statusClasses +=
+            " bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300";
+          break;
+      }
+
+  return statusClasses;
+}

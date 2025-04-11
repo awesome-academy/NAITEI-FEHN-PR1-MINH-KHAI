@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Merriweather, Merriweather_Sans } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const merriweatherSans = Merriweather_Sans({
   // variable: "--font-merriweather-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`${merriweatherMono.className} ${merriweatherSans.className} antialiased`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

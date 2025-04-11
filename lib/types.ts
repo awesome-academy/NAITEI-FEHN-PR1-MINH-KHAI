@@ -11,8 +11,54 @@ export type Order = {
   detailUrl: string;
 };
 
+export type OrderItem = {
+  id: string;
+  productId: string;
+  orderId: string;
+  quantity: number;
+  createdAt: string;
+  updatedAt: string;
+  product: Product;
+};
+
+export type Product = {
+  id: string;
+  name: string;
+  image: string;
+  price: number;
+  description: string;
+  color: string;
+  productInfo: string;
+  size: string;
+  tags: string[];
+  point: number;
+  highlights: string;
+  category: string;
+  subCategory: string;
+  createdAt: string;
+  updatedAt: string;
+  stock : number;
+  discount?: number;
+};
+
+export type Address = {
+  id: string;
+  first_name: string;
+  last_name: string;
+  company: string;
+  address: string;
+  city: string;
+  country: string;
+  zipcode: string;
+  phone: string;
+  default: boolean;
+  created_at: string;
+  updated_at: string;
+};
+
+
 export type BlogPost =  {
-    id: string; // Unique ID or slug
+    id: string;
     imageUrl: string;
     title: string;
     author: string;
@@ -20,4 +66,14 @@ export type BlogPost =  {
     commentCount: number;
     description: string;
     href: string;
+  }
+
+  export type Cart = {
+    id: string;
+    productId: string;
+    checked: boolean;
+    quantity: number;
+    createdAt: string;
+    updatedAt: string;
+    product: Product;
   }
