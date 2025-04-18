@@ -54,43 +54,47 @@ export const ROUTES = [
   },
 ];
 
-  export type NavigationItem = {
-    label: string;
-    icon: IconType;
-    href: string;
-    tooltip: string;
-  };
-  export const navigation: NavigationItem[] = [
-    {
-      label: "Trang chủ",
-      icon: RiHomeLine,
-      href: "/admin",
-      tooltip: "Trang chủ",
-    },
-    {
-      label: "Người dùng",
-      icon: HiOutlineUserGroup,
-      href: "/admin/user",
-      tooltip: "Người dùng",
-    },
-    {
-      label: "Sản phẩm",
-      icon: AiFillProduct,
-      href: "/admin/product",
-      tooltip: "Sản phẩm",
-    },
-    {
-      label: "Đơn hàng",
-      icon: MdOutlineShoppingCart,
-      href: "/admin/order",
-      tooltip: "Đơn hàng",
-    },
-  ];
+export type NavigationItem = {
+  label: string;
+  icon: IconType;
+  href: string;
+  tooltip: string;
+};
+export const navigation: NavigationItem[] = [
+  {
+    label: "Trang chủ",
+    icon: RiHomeLine,
+    href: "/admin",
+    tooltip: "Trang chủ",
+  },
+  {
+    label: "Người dùng",
+    icon: HiOutlineUserGroup,
+    href: "/admin/user",
+    tooltip: "Người dùng",
+  },
+  {
+    label: "Sản phẩm",
+    icon: AiFillProduct,
+    href: "/admin/product",
+    tooltip: "Sản phẩm",
+  },
+  {
+    label: "Đơn hàng",
+    icon: MdOutlineShoppingCart,
+    href: "/admin/order",
+    tooltip: "Đơn hàng",
+  },
+];
 
-export  type OrderStatusEN = 'cancelled' | 'pending' | 'shipped' | 'delivered';
+export type OrderStatusEN = "cancelled" | "pending" | "shipped" | "delivered";
 
 export type OrderStatusVN =
   | "Đã hủy"
   | "Đang chờ xử lý"
   | "Đang giao hàng"
   | "Đã giao hàng";
+
+export type RoleEN = "user" | "admin";
+
+export type RoleVN = "Khách hàng" | "Quản trị viên";

@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { OrderStatusVN } from "./constants";
+import { OrderStatusVN, RoleVN } from "./constants";
 import { format } from "date-fns";
 
 export function cn(...inputs: ClassValue[]) {
@@ -12,6 +12,11 @@ const statusTranslations: Record<string, OrderStatusVN> = {
   pending: "Đang chờ xử lý",
   shipped: "Đang giao hàng",
   delivered: "Đã giao hàng",
+};
+
+const roleTranslations: Record<string, RoleVN> = {
+  user: "Khách hàng",
+  admin: "Quản trị viên",
 };
 
 export function translateOrderStatusTS(
@@ -26,6 +31,17 @@ export function translateOrderStatusTS(
   const translation = statusTranslations[lowerCaseStatus];
 
   return translation !== undefined ? translation : status;
+}
+
+export function translateRoleToVN(role: string | null | undefined): string {
+  if (!role) {
+    return "Không xác định";
+  }
+
+  const lowerCaseRole = role.toLowerCase();
+  const translation = roleTranslations[lowerCaseRole];
+
+  return translation !== undefined ? translation : role;
 }
 
 export function formatVndThousands(

@@ -4,7 +4,7 @@
       "id": "d587573e-73b2-4fe9-89d8-3cfbcf63f672",
       "email": "user1@example.com",
       "password": "password1",
-      "role": "moderator",
+      "role": "admin",
       "username": "user1",
       "full_name": "User 1 Name",
       "created_at": "2024-07-28T01:31:36.592165",
@@ -24,7 +24,7 @@
       "id": "d3756666-0bf0-4a18-bd72-8ccd2b56b1d8",
       "email": "user3@example.com",
       "password": "password3",
-      "role": "moderator",
+      "role": "admin",
       "username": "user3",
       "full_name": "User 3 Name",
       "created_at": "2024-11-08T09:04:45.592613",
@@ -34,7 +34,7 @@
       "id": "c73e9403-89d0-4e60-9853-e02b7613be21",
       "email": "user4@example.com",
       "password": "password4",
-      "role": "moderator",
+      "role": "admin",
       "username": "user4",
       "full_name": "User 4 Name",
       "created_at": "2024-04-27T04:18:56.592629",
@@ -64,7 +64,7 @@
       "id": "b0c410cd-dbce-4e79-84c9-77759289f54c",
       "email": "user7@example.com",
       "password": "password7",
-      "role": "moderator",
+      "role": "admin",
       "username": "user7",
       "full_name": "User 7 Name",
       "created_at": "2025-03-01T20:21:44.592685",
@@ -74,7 +74,7 @@
       "id": "2ea8d59a-1446-431b-8898-7a622c5389bc",
       "email": "user8@example.com",
       "password": "password8",
-      "role": "moderator",
+      "role": "admin",
       "username": "user8",
       "full_name": "User 8 Name",
       "created_at": "2024-04-06T21:01:58.592700",
@@ -84,7 +84,7 @@
       "id": "57454c1e-a333-4a62-b38d-ac81602170b7",
       "email": "user9@example.com",
       "password": "password9",
-      "role": "moderator",
+      "role": "admin",
       "username": "user9",
       "full_name": "User 9 Name",
       "created_at": "2024-05-08T22:33:32.592716",
@@ -174,7 +174,7 @@
       "id": "64b2d01b-3bbe-45bc-824f-f5c8347c27bb",
       "email": "user18@example.com",
       "password": "password18",
-      "role": "moderator",
+      "role": "admin",
       "username": "user18",
       "full_name": "User 18 Name",
       "created_at": "2025-03-20T03:56:14.592838",
@@ -204,7 +204,7 @@
       "id": "942b5858-904f-46cf-9ca4-722fbe554fc9",
       "email": "user21@example.com",
       "password": "password21",
-      "role": "moderator",
+      "role": "admin",
       "username": "user21",
       "full_name": "User 21 Name",
       "created_at": "2024-06-13T12:58:36.592878",
@@ -214,7 +214,7 @@
       "id": "8bf45d32-3040-4322-a7c2-128f971b791b",
       "email": "user22@example.com",
       "password": "password22",
-      "role": "moderator",
+      "role": "admin",
       "username": "user22",
       "full_name": "User 22 Name",
       "created_at": "2024-12-16T22:13:26.592890",
@@ -234,7 +234,7 @@
       "id": "a0b5bd84-48f2-4d8b-95ec-27b67707bfc6",
       "email": "user24@example.com",
       "password": "password24",
-      "role": "moderator",
+      "role": "admin",
       "username": "user24",
       "full_name": "User 24 Name",
       "created_at": "2024-08-01T21:02:15.592915",
@@ -244,7 +244,7 @@
       "id": "88e08203-8c40-4a04-8eeb-cad9e69482a3",
       "email": "user25@example.com",
       "password": "password25",
-      "role": "moderator",
+      "role": "admin",
       "username": "user25",
       "full_name": "User 25 Name",
       "created_at": "2025-02-10T09:35:31.592928",
@@ -665,11 +665,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Chivas",
       "stock": 35,
-      "tags": [
-        "tag1",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag1", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/1.jpg",
@@ -701,11 +697,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Hàng độc - Rượu độc đáo",
       "stock": 42,
-      "tags": [
-        "tag2",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag2", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/2.jpg",
@@ -729,11 +721,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Johnnie Walker",
       "stock": 75,
-      "tags": [
-        "tag3",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag3", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/3.jpg",
@@ -757,11 +745,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Whisky",
       "stock": 77,
-      "tags": [
-        "tag4",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag4", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/4.jpg",
@@ -785,11 +769,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Remy Martin",
       "stock": 27,
-      "tags": [
-        "tag5",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag5", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/5.jpg",
@@ -813,11 +793,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Pháp",
       "stock": 42,
-      "tags": [
-        "tag6",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag6", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/6.jpg",
@@ -841,11 +817,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Remy Martin",
       "stock": 74,
-      "tags": [
-        "tag7",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag7", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/7.jpg",
@@ -869,11 +841,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Glenmorangie",
       "stock": 40,
-      "tags": [
-        "tag8",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag8", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/8.jpg",
@@ -897,11 +865,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Ballantine's",
       "stock": 90,
-      "tags": [
-        "tag9",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag9", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/9.jpg",
@@ -925,11 +889,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Úc",
       "stock": 90,
-      "tags": [
-        "tag10",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag10", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/10.jpg",
@@ -953,11 +913,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Úc",
       "stock": 45,
-      "tags": [
-        "tag11",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag11", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/11.jpg",
@@ -981,11 +937,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Mỹ",
       "stock": 93,
-      "tags": [
-        "tag12",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag12", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/12.jpg",
@@ -1009,11 +961,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Chi-Lê",
       "stock": 25,
-      "tags": [
-        "tag13",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag13", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/13.jpg",
@@ -1037,11 +985,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Philip",
       "stock": 9,
-      "tags": [
-        "tag14",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag14", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/14.jpg",
@@ -1065,11 +1009,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Johnnie Walker",
       "stock": 85,
-      "tags": [
-        "tag15",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag15", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/15.jpg",
@@ -1093,11 +1033,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Chi-Lê",
       "stock": 68,
-      "tags": [
-        "tag16",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag16", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/16.jpg",
@@ -1121,11 +1057,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Glenmorangie",
       "stock": 32,
-      "tags": [
-        "tag17",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag17", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/17.jpg",
@@ -1149,11 +1081,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Glenmorangie",
       "stock": 11,
-      "tags": [
-        "tag18",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag18", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/18.jpg",
@@ -1177,11 +1105,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Glenmorangie",
       "stock": 32,
-      "tags": [
-        "tag19",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag19", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/19.jpg",
@@ -1205,11 +1129,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Cognac",
       "stock": 9,
-      "tags": [
-        "tag20",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag20", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/20.jpg",
@@ -1233,11 +1153,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Cognac",
       "stock": 22,
-      "tags": [
-        "tag21",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag21", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/1.jpg",
@@ -1261,11 +1177,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Úc",
       "stock": 8,
-      "tags": [
-        "tag22",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag22", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/22.jpg",
@@ -1289,11 +1201,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Úc",
       "stock": 14,
-      "tags": [
-        "tag23",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag23", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/23.jpg",
@@ -1317,11 +1225,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Ý",
       "stock": 75,
-      "tags": [
-        "tag24",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag24", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/24.jpg",
@@ -1345,11 +1249,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Ý",
       "stock": 11,
-      "tags": [
-        "tag25",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag25", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/25.jpg",
@@ -1373,11 +1273,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Hàng độc - Rượu độc đáo",
       "stock": 34,
-      "tags": [
-        "tag26",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag26", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/26.jpg",
@@ -1401,11 +1297,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Nam Phi",
       "stock": 23,
-      "tags": [
-        "tag27",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag27", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/27.jpg",
@@ -1429,11 +1321,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Ý",
       "stock": 21,
-      "tags": [
-        "tag28",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag28", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/28.jpg",
@@ -1457,11 +1345,7 @@
       "category": "RƯỢU NGOẠI",
       "subcategory": "Rượu Chivas",
       "stock": 15,
-      "tags": [
-        "tag29",
-        "alcohol",
-        "premium"
-      ],
+      "tags": ["tag29", "alcohol", "premium"],
       "images": [
         {
           "url": "/images/2.jpg",
@@ -1485,11 +1369,7 @@
       "category": "RƯỢU VANG",
       "subcategory": "Rượu Vang Chi-Lê",
       "stock": 54,
-      "tags": [
-        "tag30",
-        "alcohol",
-        "cheap"
-      ],
+      "tags": ["tag30", "alcohol", "cheap"],
       "images": [
         {
           "url": "/images/30.jpg",
@@ -1508,7 +1388,7 @@
       "quantity": 5,
       "checked": true,
       "created_at": "2024-12-01T05:33:48.595000",
-      "updated_at": "2025-04-11T09:59:03.378Z"
+      "updated_at": "2025-04-16T07:57:31.122Z"
     },
     {
       "id": "b9bf4ecd-69d0-4863-be8f-6b976337c93d",
@@ -1517,7 +1397,7 @@
       "quantity": 2,
       "checked": true,
       "created_at": "2024-07-26T21:01:35.595053",
-      "updated_at": "2025-04-11T09:59:03.380Z"
+      "updated_at": "2025-04-16T07:57:31.123Z"
     },
     {
       "id": "f69a526b-3cc7-4895-9a5d-4ad6f12cda69",
@@ -1818,30 +1698,12 @@
     },
     {
       "userId": "d587573e-73b2-4fe9-89d8-3cfbcf63f672",
-      "productId": "b3e0853f-03b0-4fd0-b212-48225195a85d",
-      "quantity": 1,
-      "checked": false,
-      "created_at": "2025-04-15T01:29:23.141Z",
-      "updated_at": "2025-04-15T01:29:23.141Z",
-      "id": "BE3dDH-"
-    },
-    {
-      "userId": "d587573e-73b2-4fe9-89d8-3cfbcf63f672",
       "productId": "654f56ff-bf9f-4f61-84d1-7eead66ef0bb",
       "quantity": 5,
       "checked": false,
       "created_at": "2025-04-15T01:30:13.691Z",
-      "updated_at": "2025-04-15T01:30:13.691Z",
+      "updated_at": "2025-04-16T07:57:31.123Z",
       "id": "WxzpXFF"
-    },
-    {
-      "userId": "d587573e-73b2-4fe9-89d8-3cfbcf63f672",
-      "productId": "29c91a99-84a3-4e8d-9875-4cbcadcee094",
-      "quantity": 1,
-      "checked": false,
-      "created_at": "2025-04-15T01:43:25.006Z",
-      "updated_at": "2025-04-15T01:43:25.006Z",
-      "id": "8ttwssR"
     },
     {
       "id": "15881fac-05fc-49c2-82c3-f645f3ce7614",
@@ -1850,16 +1712,7 @@
       "quantity": 5,
       "checked": false,
       "created_at": "2025-04-15T02:12:11.280Z",
-      "updated_at": "2025-04-15T02:12:11.280Z"
-    },
-    {
-      "id": "fe1d9a0e-634e-4a45-9f7c-df4609a325c0",
-      "userId": "d587573e-73b2-4fe9-89d8-3cfbcf63f672",
-      "productId": "b3e0853f-03b0-4fd0-b212-48225195a85d",
-      "quantity": 1,
-      "checked": false,
-      "created_at": "2025-04-15T02:12:57.327Z",
-      "updated_at": "2025-04-15T02:12:57.327Z"
+      "updated_at": "2025-04-16T07:57:31.123Z"
     },
     {
       "id": "8d092358-61b3-435d-9cc1-6801eaa07abc",
@@ -1868,7 +1721,7 @@
       "quantity": 1,
       "checked": false,
       "created_at": "2025-04-15T02:13:29.094Z",
-      "updated_at": "2025-04-15T02:13:29.094Z"
+      "updated_at": "2025-04-16T07:57:31.123Z"
     }
   ],
   "orders": [

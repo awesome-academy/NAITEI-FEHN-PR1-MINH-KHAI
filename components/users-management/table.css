@@ -1,0 +1,22 @@
+﻿.table-fixed {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-fixed th,
+.table-fixed td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 8px;
+}
+
+.table-fixed th {
+  background-color: #f4f4f5;
+  font-weight: 600;
+}
+
+.table-fixed td {
+  border-top: 1px solid #e4e4e7;
+}

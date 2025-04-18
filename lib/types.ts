@@ -24,7 +24,6 @@ export type User = {
   updatedAt: string;
 };
 
-
 export type OrderItem = {
   id: string;
   productId: string;
