@@ -1,51 +1,54 @@
 ﻿"use client";
 import AddressCard from "@/components/addresses/address-card";
-import AddressEditForm from "@/components/addresses/address-form";
-import { Address } from "@/lib/types/address";
-import { useState } from "react";
+import AddressEditForm from "@/components/addresses/address-edit";
+import AddressAddForm from "@/components/addresses/address-add";
+import { Address, AddressStatusOpenFormEdit } from "@/lib/types/address";
+import { useEffect, useState } from "react";
 
-export default function AddressesMain() {
+interface AddressMainProps {
+  addresses: Address[];
+}
+
+export default function AddressesMain({ addresses }: AddressMainProps) {
   const [formInstances, setFormInstances] = useState<number[]>([]);
+  const [initAddresses, setInitAddresses] = useState<
+    AddressStatusOpenFormEdit[]
+  >([]);
+  useEffect(() => {
+    const sortedAddresses = addresses.sort(
+      (a: Address, b: Address) =>
+        new Date(b.updated_at || "").getTime() -
+        new Date(a.updated_at || "").getTime()
+    );
 
-  const addresses: Address[] = [
-    {
-      id: "0acf2e6f-702b-4e7d-aeb9-6fbbf4ab4dad",
-      userId: "d587573e-73b2-4fe9-89d8-3cfbcf63f672",
-      first_name: "Giang",
-      last_name: "Lê Anh",
-      company: "Cổ phần công nghệ DKT",
-      address: "Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội",
-      city: "Hà Nội",
-      country: "Việt Nam",
-      zipcode: "1000",
-      phone: "123-456-7800",
-      default: true,
-      created_at: "2025-03-25T12:43:39.593251",
-      updated_at: "2024-09-25T11:13:46.593266",
-    },
-    {
-      id: "1bcf3e7f-803c-5e8d-bec0-7fccf5bc5dad",
-      userId: "d587573e-73b2-4fe9-89d8-3cfbcf63f672",
-      first_name: "First2",
-      last_name: "Last2",
-      company: "Company2",
-      address: "2 Avenue Road",
-      city: "Hanoi",
-      country: "Vietnam",
-      zipcode: "2000",
-      phone: "234-567-8901",
-      default: false,
-      created_at: "2025-03-22T10:33:29.593251",
-      updated_at: "2024-09-22T09:03:46.593266",
-    },
-  ];
+    const addressListData: AddressStatusOpenFormEdit[] = sortedAddresses.map(
+      (address) => ({
+        addressDetail: address,
+        openFormEdit: false,
+      })
+    );
 
+    setInitAddresses(addressListData);
+  }, [addresses]);
   const handleAddForm = () => {
-    setFormInstances((prev) => [...prev, Date.now()]); // Sử dụng timestamp làm key duy nhất
+    setFormInstances((prev) => [...prev, Date.now()]);
   };
 
   const handleRemoveForm = (id: number) => {
     setFormInstances((prev) => prev.filter((formId) => formId !== id));
+  };
+
+  const ChangeStatusFormEditAddress = (id: string) => {
+    setInitAddresses((prev) =>
+      prev.map((addr) =>
+        addr.addressDetail.id === id
+          ? {
+              ...addr,
+              openFormEdit: !addr.openFormEdit,
+            }
+          : addr
+      )
+    );
   };
 
   return (
@@ -63,16 +66,33 @@ export default function AddressesMain() {
       </div>
       <div className="flex w-full flex-row">
         <div className="w-1/2 mt-5 flex flex-col gap-4">
-          {addresses.map((address) => (
-            <AddressCard key={address.id} address={address} />
-          ))}
+          {initAddresses.map((addressData) =>
+            addressData.openFormEdit ? (
+              <AddressEditForm
+                key={addressData.addressDetail.id}
+                addressData={addressData}
+                closeFormEdit={ChangeStatusFormEditAddress}
+                addressesData={initAddresses}
+                setInitAddresses={setInitAddresses}
+              />
+            ) : (
+              <AddressCard
+                key={addressData.addressDetail.id}
+                address={addressData.addressDetail}
+                openFormEditAddress={ChangeStatusFormEditAddress}
+                setInitAddresses={setInitAddresses}
+              />
+            )
+          )}
         </div>
         <div className="w-1/2 flex flex-col gap-4 items-start justify-start mt-5">
           {formInstances.map((formId) => (
             <div key={formId} className="relative w-full">
-              <AddressEditForm
+              <AddressAddForm
                 handleRemoveForm={handleRemoveForm}
                 id={formId}
+                setInitAddresses={setInitAddresses}
+                addressesData={initAddresses}
               />
             </div>
           ))}

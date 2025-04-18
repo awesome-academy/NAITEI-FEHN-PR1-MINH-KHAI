@@ -14,6 +14,11 @@
   updated_at: string;
 }
 
+export interface AddressStatusOpenFormEdit {
+  addressDetail: Address;
+  openFormEdit: boolean;
+}
+
 export type AddressFormInput = Omit<
   Address,
   "id" | "userId" | "created_at" | "updated_at"
